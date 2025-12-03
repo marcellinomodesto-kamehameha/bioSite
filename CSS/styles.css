@@ -33,7 +33,7 @@ ul li a {
   text-decoration: none;
   font-size: 1.5em;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ul li a:hover:not(.active) {
@@ -53,19 +53,18 @@ padding: 14px 16px;
 text-decoration: none;
 font-weight: bold;
 font-size: 1.5em;
-font-family: "Montserrat"
+ font-family: "Roboto", sans-serif;
 }
 
 /*Style rules for hero image*/
 .hero_image{
     width: 100%;
-    height: 800px;
+    height: auto;
     object-fit: cover;
 }
 
 .container{
-    width: 100%;
-    height: 900px;
+  height: auto;
     position: relative;
 }
 
@@ -73,9 +72,10 @@ font-family: "Montserrat"
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -120%);
+    transform: translate(-50%, -250%);
     color: white;
     font-size: 2.0em;
+     text-shadow: 2px 2px 4px #000000;
 }
 
 /*Style rules for body*/
@@ -86,6 +86,7 @@ body{
 
 .row {
     width: 100%;
+    overflow: auto;
 }
 
 .wrapper {
@@ -105,13 +106,16 @@ body{
 }
 
 .wrapper figcaption
-    {   
+{
   border-radius: 25px;
   background-position: left top;
   background-repeat: repeat;
   padding: 15px;
   background-color: white;
+}
 
+figure{
+  margin-top: 30%;
 }
 
 /*Style rules for Mobile Viewport*/
@@ -128,14 +132,15 @@ body{
 /*Style rules for footer*/
   footer{
   font-size: 0.85em;
+  margin-top: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 0%;
   padding-right: 0%;
   background-color: #6A8987;
   text-align: center;
-  font-family: "Montserrat";
-  
+  font-family: "Montserrat", sans-serif;
+
 }
 footer a{
   color: #000000;
