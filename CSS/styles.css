@@ -89,6 +89,7 @@ body{
     font-family: "Outfit", sans-serif;
 }
 
+/*Style rules for main content*/
 .row {
     width: 100%;
     overflow: auto;
@@ -108,15 +109,17 @@ body{
   background-position: left top;
   background-repeat: repeat;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.wrapper figcaption
-{
+.wrapper figcaption {
+  margin-top: 10px;
   border-radius: 25px;
   background-position: left top;
   background-repeat: repeat;
   padding: 15px;
   background-color: lightgray;
+  line-height: 2.0;
 }
 
 figure{
@@ -127,20 +130,34 @@ figure{
   position: absolute;
   top: 50%;
   left: 50%;
+  /*Transform Property not used in the textbook*/
   transform: translate(-50%, -50%);
   opacity: 1.0px;
 }
 
 .about {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 60px 400px;
 }
 
 .about h1{
-  margin-top: 40px;
+  margin: 50px;
+  font-weight: 500;
+}
 
+.about img {
+  width: 600px;
+  height: 400px;
+  margin: 50px;
+}
+
+.about p {
+margin: 30px;
+line-height: 2.0;
+}
+
+section{
+  margin: 20px;
 }
 
 
