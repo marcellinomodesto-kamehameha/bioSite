@@ -306,10 +306,6 @@ ul li a {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.mobile_image{
-  margin-top: 150px;
-}
-
 .grid {
     grid-template-columns: auto auto;
     text-align: center;}
