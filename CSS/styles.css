@@ -32,7 +32,7 @@ ul li a {
   margin-right: 35px;
   margin-top: 7px;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 3em;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
 }
@@ -43,15 +43,6 @@ ul li a:hover:not(.active) {
 
 ul li a.active {
   background-color: #607c8e;
-}
-
-.mobile-nav a {
-    color: white;
-    text-align: center;
-    font-size: 1.5em;
-    text-decoration: none;
-    padding: 3%;
-    display: block;
 }
 
 #logo {
@@ -98,11 +89,20 @@ body  {
 
 /*Style rules for main content*/
 
+
 section {
   margin: 30px;
 }
 
+section h1 {
+  text-align: center;
+}
+
 section h2  {
+  text-align: center;
+}
+
+section h3  {
   text-align: center;
 }
 
@@ -143,6 +143,10 @@ figcaption {
   margin-top: 30px;
 }
 
+#about-text h4 {
+  margin-top: 30px;
+}
+
 #about_grid {
  display: grid;
  grid-template-columns: auto auto;
@@ -151,6 +155,10 @@ figcaption {
  margin: 30px;
  line-height: 2.0;
  text-align: center;
+}
+
+#about_image {
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /*Style rules for footer*/
@@ -199,7 +207,7 @@ th {
 }
 
   /*Style rules for Mobile Viewport*/
-@media screen and (min-width:600px) {
+@media screen and (max-width:600px) {
 
   .mobile-nav {
     display: inline-block;
@@ -229,10 +237,23 @@ text-align: center;}
     width: 250px;
     height: 500px;
 }
+/*Style rules for mobile nav*/
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 7px;
+  margin-right: 35px;
+  margin-top: 7px;
+  text-decoration: none;
+  font-size: 1.0em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
 
 /*Styles rules to show mobile class and hide desktop class*/
 
-#mobile_image {
+.mobile_image {
     display: none;
 }
 
@@ -244,8 +265,25 @@ text-align: center;}
     display: none;
 }
 
+.mobile {
+  display: block;
+}
+
+.mobile h1, .mobile h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .desktop {
     display: none;
+}
+
+#logo {
+  display: none;}
+
+  #about2_image {
+  display: none;
+
 }
 
 }
@@ -268,6 +306,10 @@ text-align: center;}
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.mobile_image{
+  margin-top: 150px;
+}
+
 .grid {
     grid-template-columns: auto auto;
     text-align: center;}
@@ -278,11 +320,35 @@ text-align: center;}
 
 #about_image {
     width: 300px;
+    margin-top: 20px;
+}
+
+#about2_image {
+    width: 300px;
+    margin-top: 400%;
 }
 
 #about_text {
 line-height: 0;
   }
+
+  ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 7px;
+  margin-right: 35px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 1.0em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+#logo {
+  font-size: 1em;
+}
+
 
 /*Styles rules to show tablet class and hide desktop class*/
 
@@ -291,13 +357,21 @@ line-height: 0;
 }
 
 .mobile-nav {
-    display: none;
+    display: inline-block;
+}
+
+.mobile {
+  display: none;
 }
 
  .desktop {
     display: none;
 }
 
+#about2_image {
+  display: inline-block;
+
+}
 }
 
 
@@ -322,6 +396,24 @@ line-height: 0;
 #about_image {
     width: 500px;
 }
+
+/*Style rules for nav*/
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  margin-right: 35px;
+  margin-top: 7px;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif; }
+
+#logo {
+  font-size: 1.5em;
+  }
+
 /* Tablet Viewport: Show desktop class, hide mobile class*/
 
 .mobile-tab {
@@ -336,8 +428,16 @@ line-height: 0;
     display: inline-block;
 }
 
+.mobile {
+  display: none;
+}
+
 .desktop {
   display: block;
+}
+
+#about2_image {
+  display: none;
 }
 
 }
@@ -366,6 +466,20 @@ main {
     background-color: #fff;
 }
 
+/*Style rules for nav*/
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  margin-right: 35px;
+  margin-top: 7px;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
 /*Styles rules to show desktop class and hide mobile-tab class*/
    .mobile-tab{
     display: none;
@@ -375,8 +489,16 @@ main {
     display: inline-block;
 }
 
+.mobile {
+  display: none;
+}
+
 .desktop{
     display: block;
+}
+
+#about2_image {
+  display: none;
 }
 
 }
