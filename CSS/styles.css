@@ -45,6 +45,15 @@ ul li a.active {
   background-color: #607c8e;
 }
 
+.mobile-nav a {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
 #logo {
 float: left;
 display: block;
@@ -72,15 +81,6 @@ font-family: "Science Gothic", sans-serif;
     object-fit: cover;
 }
 
-#container h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -250%);
-    color: white;
-    font-size: 2.0em;
-    text-shadow: 2px 2px 4px #000000;
-}
 #banner {
   position: relative;
 }
@@ -91,21 +91,12 @@ font-family: "Science Gothic", sans-serif;
 }
 
 /*Style rules for body*/
+
 body  {
     font-family: "Outfit", sans-serif;
 }
 
 /*Style rules for main content*/
-
-.row {
-    width: 100%;
-    overflow: auto;
-}
-
-.row h1 {
-  text-align: center;
-  margin: 20px;
-}
 
 section {
   margin: 30px;
@@ -115,7 +106,12 @@ section h2  {
   text-align: center;
 }
 
-/*Specific code for hobby.html*/
+main h2 {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
 .grid {
  display: grid;
  grid-template-columns: auto auto;
@@ -125,66 +121,42 @@ section h2  {
  line-height: 2.0;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-bottom: 2%;
+}
+
 .img {
-  width: 300px;
-  height: 400px;
+  width: 430px;
+  height: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/*Specific rules for index.html*/
-.index {
-  width: 30%;
-  float: left;
-  text-align: center;
-  margin: 0 1.5%;
-}
-
-.index img  {
-  width: 400px;
-  height: 500px;
-  border-radius: 25px;
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.index figcaption {
-  margin-top: 10px;
-  border-radius: 25px;
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 15px;
-  background-color: lightgray;
-  line-height: 2.0;
-}
+figcaption {
+  padding: 1px;
+  margin: 2px;
+ }
 
 /*Specific style rules for about page*/
-#about {
-  text-align: center;
-  padding: 60px 400px;
+#about-text {
+  margin-top: 30px;
 }
 
-#about h1 {
-  margin: 50px;
-  font-weight: 500;
-}
-
-#about img {
-  width: 600px;
-  height: 400px;
-  margin: 50px;
-}
-
-#about p {
-margin: 30px;
-line-height: 2.0;
+#about_grid {
+ display: grid;
+ grid-template-columns: auto auto;
+ grid-column-gap: 2em;
+ padding-bottom: 2%;
+ margin: 30px;
+ line-height: 2.0;
+ text-align: center;
 }
 
 /*Style rules for footer*/
-  footer  {
+  footer {
   font-size: 0.85em;
-  margin-top: 5%;
+  margin-top: 2%;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 0%;
@@ -194,7 +166,8 @@ line-height: 2.0;
   font-family: "Montserrat", sans-serif;
 
 }
-footer a  {
+
+footer a {
   color: #000000;
   text-decoration: none;
   font-weight: bold;
@@ -206,32 +179,210 @@ table {
     border: 10px #607c8e;
     border-collapse: collapse;
     margin: 0 auto;
-  }
+}
 
-  caption {
+caption {
     font-size: 1.5em;
     font-weight: bold;
     padding: 1%;
-  }
+}
 
-  th, td {
+th, td {
     border: 1px solid #607c8e;
     padding: 1%;
-  }
+}
 
-  th {
+th {
     background-color: #6A8987;
     color: black;
     font-size: 1.15em;
-  }
+}
 
   /*Style rules for Mobile Viewport*/
-@media screen and (max-width:599px) {
-    .row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (min-width:600px) {
 
+  .mobile-nav {
+    display: inline-block;
+  }
+
+.grid {grid-template-columns: auto;
+text-align: center;}
+
+.gallery {
+  grid-template-columns: auto;
+  gap: 1em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.img {
+  width: 250px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#about_grid{
+    grid-template-columns: auto;
+  }
+
+#about_image {
+    width: 250px;
+    height: 500px;
+}
+
+/*Styles rules to show mobile class and hide desktop class*/
+
+#mobile_image {
+    display: none;
+}
+
+.mobile-tab {
+    display: block;
+  }
+
+.mobile-tab_hero {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+}
+
+/* Tablet Viewport: Style rules for nav area */
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px), print {
+
+.gallery {
+    grid-template-columns: auto auto;
+    gap: 1em;
+    text-align: center;
+   margin-top: 50px;
+}
+
+.img {
+    width: 250px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grid {
+    grid-template-columns: auto auto;
+    text-align: center;}
+
+#about_grid{
+    grid-template-columns: 1fr 1fr;
+}
+
+#about_image {
+    width: 300px;
+}
+
+#about_text {
+line-height: 0;
+  }
+
+/*Styles rules to show tablet class and hide desktop class*/
+
+.mobile-tab {
+    display: block;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+ .desktop {
+    display: none;
+}
+
+}
+
+
+
+/*Media Query for Desktop Viewport*/
+@media screen and (min-width:1000px), print{
+.grid {grid-template-columns: auto auto;}
+
+.gallery {
+  grid-template-columns: auto auto auto;
+  gap: 1em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.img {
+  width: 250px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#about_image {
+    width: 500px;
+}
+/* Tablet Viewport: Show desktop class, hide mobile class*/
+
+.mobile-tab {
+    display: none;
+}
+
+.mobile-tab_hero {
+    display:inline-block ;
+}
+
+.mobile-nav {
+    display: inline-block;
+}
+
+.desktop {
+  display: block;
+}
+
+}
+
+
+
+/*Media Query for Large Desktop Viewports*/
+@media screen and (min-width:1921px) {
+body {
+    background: linear-gradient(#f6eee4, #6A8987, #f6eee4);
+}
+
+.img {
+  width: 450px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#wrapper{
+    width: 1900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    background-color: #fff;
+}
+
+/*Styles rules to show desktop class and hide mobile-tab class*/
+   .mobile-tab{
+    display: none;
+}
+
+.mobile-nav {
+    display: inline-block;
+}
+
+.desktop{
+    display: block;
+}
+
+}
+
+/*Media Query for Print*/
+@media print {
+  body {background-color: white;
+  color: black;}
 }
